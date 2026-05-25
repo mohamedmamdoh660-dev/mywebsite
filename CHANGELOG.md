@@ -12,3 +12,4 @@ All notable changes to this project will be documented in this file.
 - Implemented native CSS scroll reveal animations with high-fidelity JavaScript IntersectionObserver fallback.
 - Saved user's official `logo.png` logo and embedded it into the header, footer, and about page with text fallback.
 - Added project documentation in `docs/documentation.md`.
+- Added `nixpacks.toml` configuration to copy static assets to a `dist/` directory during build, resolving Coolify's default static-site `dist/` folder requirement.
