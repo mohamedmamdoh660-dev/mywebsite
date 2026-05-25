@@ -13,3 +13,4 @@ All notable changes to this project will be documented in this file.
 - Saved user's official `logo.png` logo and embedded it into the header, footer, and about page with text fallback.
 - Added project documentation in `docs/documentation.md`.
 - Added `nixpacks.toml` configuration to copy static assets to a `dist/` directory during build, resolving Coolify's default static-site `dist/` folder requirement.
+- Created static Terms of Service (`terms.html`) and Privacy Policy (`privacy.html`) pages, linked them in the footer of the main website, and updated build command in `nixpacks.toml` to copy all HTML files.

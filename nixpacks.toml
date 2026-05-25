@@ -1,2 +1,2 @@
 [phases.build]
-cmds = ["mkdir -p dist && cp index.html book-breakdown-ar.html logo.png dist/"]
+cmds = ["mkdir -p dist && cp *.html *.png dist/"]
