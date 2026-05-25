@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Breakdown AR | الوجهة الأولى لشرح الكتب العالمية</title>
+  <title>Book Breakdown AR | تفكيك النظم وحقائق الكتب</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="الوجهة الأولى لشرح الكتب العالمية بأسلوب البودكاست الحواري الممتع. نفكك الأوهام ونكشف الحقائق الصادمة عن المال، القوة، ريادة الأعمال وعلم النفس.">
   <meta name="keywords" content="بودكاست كتب, ملخصات كتب, الأب الغني والأب الفقير, 48 قانونا للقوة, سيكولوجية المال, الحرية المالية, ريادة الأعمال, علم النفس">
   <meta name="author" content="Book Breakdown AR">
-  <meta property="og:title" content="Book Breakdown AR | الوجهة الأولى لشرح الكتب العالمية">
+  <meta property="og:title" content="Book Breakdown AR | تفكيك النظم وحقائق الكتب">
   <meta property="og:description" content="الوجهة الأولى لشرح الكتب العالمية بأسلوب البودكاست الحواري الممتع. نفكك الأوهام ونكشف الحقائق الصادمة عن المال، القوة، ريادة الأعمال وعلم النفس.">
   <meta property="og:image" content="logo.png">
-  <meta property="og:url" content="https://www.youtube.com/@BookBreakdownAR">
+  <meta property="og:url" content="https://bookbreakdown.net">
   
-  <!-- Favicon fallback -->
   <link rel="icon" type="image/png" href="logo.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Amiri (Serif) + Cairo (Sans-Serif/Display) + Tajawal (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Avoid FOUC (Flash of Unstyled Content) for theme choice -->
+  <!-- Avoid FOUC (Flash of Unstyled Content) -->
   <meta name="color-scheme" content="dark light">
   <script>
     {
@@ -38,43 +37,45 @@
 
   <style>
     /* -------------------------------------------------------------
-       1. DESIGN SYSTEM & CSS VARIABLES
+       1. THEME VARIABLES & SYSTEM WIDE STYLE DEFINITION
        ------------------------------------------------------------- */
     :root[data-theme="dark"] {
-      --bg-color: #0c0b0a;
-      --bg-card: #141211;
-      --bg-card-hover: #1b1917;
+      --bg-color: #070605; /* Deep warm black */
+      --bg-card: rgba(20, 18, 16, 0.45); /* Glassmorphic card back */
+      --bg-card-hover: rgba(28, 25, 23, 0.6);
       --text-color: #f5f2eb;
-      --text-muted: #b5af9f;
-      --accent-color: #c8843a;
+      --text-muted: #aba595;
+      --accent-color: #c8843a; /* Copper/Amber */
       --accent-hover: #e0994f;
-      --accent-muted: rgba(200, 132, 58, 0.15);
-      --border-color: #24201d;
-      --navbar-bg: rgba(12, 11, 10, 0.85);
-      --shadow: rgba(0, 0, 0, 0.6);
-      --input-bg: #1a1816;
-      --hero-overlay: radial-gradient(circle at 50% 50%, rgba(200, 132, 58, 0.08) 0%, rgba(12, 11, 10, 0) 70%);
+      --accent-muted: rgba(200, 132, 58, 0.12);
+      --border-color: rgba(200, 132, 58, 0.15);
+      --border-hover: rgba(200, 132, 58, 0.4);
+      --navbar-bg: rgba(7, 6, 5, 0.7);
+      --shadow: rgba(0, 0, 0, 0.75);
+      --glow: rgba(200, 132, 58, 0.08);
+      --input-bg: rgba(15, 13, 11, 0.6);
       color-scheme: dark;
     }
 
     :root[data-theme="light"] {
-      --bg-color: #f7f5f0;
-      --bg-card: #ffffff;
-      --bg-card-hover: #faf8f5;
-      --text-color: #1c1a17;
-      --text-muted: #666052;
-      --accent-color: #c8843a;
-      --accent-hover: #ab6e2c;
-      --accent-muted: rgba(200, 132, 58, 0.1);
-      --border-color: #e6e0d3;
-      --navbar-bg: rgba(247, 245, 240, 0.85);
-      --shadow: rgba(40, 30, 20, 0.08);
-      --input-bg: #ffffff;
-      --hero-overlay: radial-gradient(circle at 50% 50%, rgba(200, 132, 58, 0.05) 0%, rgba(247, 245, 240, 0) 70%);
+      --bg-color: #f7f5f0; /* Cream white */
+      --bg-card: rgba(255, 255, 255, 0.65);
+      --bg-card-hover: rgba(255, 255, 255, 0.85);
+      --text-color: #171513;
+      --text-muted: #5e594d;
+      --accent-color: #ab6e2c;
+      --accent-hover: #8e581e;
+      --accent-muted: rgba(171, 110, 44, 0.08);
+      --border-color: rgba(171, 110, 44, 0.2);
+      --border-hover: rgba(171, 110, 44, 0.5);
+      --navbar-bg: rgba(247, 245, 240, 0.7);
+      --shadow: rgba(40, 30, 20, 0.05);
+      --glow: rgba(171, 110, 44, 0.03);
+      --input-bg: rgba(255, 255, 255, 0.8);
       color-scheme: light;
     }
 
-    /* Reset & Base Styles */
+    /* Reset & Base HTML */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -87,6 +88,52 @@
       scrollbar-color: var(--accent-color) var(--bg-card);
     }
 
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+      padding-top: 4vh; /* offset top cinematic bar */
+      padding-bottom: 4vh; /* offset bottom cinematic bar */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .serif-text {
+      font-family: 'Amiri', serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* -------------------------------------------------------------
+       2. CINEMATIC OVERLAY & DYNAMIC BACKGROUND
+       ------------------------------------------------------------- */
+    .cinematic-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 4vh;
+      background-color: #000000;
+      z-index: 1001;
+      pointer-events: none;
+    }
+
+    .cinematic-bar.top { top: 0; }
+    .cinematic-bar.bottom { bottom: 0; }
+
     #bg-canvas {
       position: fixed;
       top: 0;
@@ -97,162 +144,31 @@
       pointer-events: none;
     }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* -------------------------------------------------------------
-       2. REUSABLE COMPONENTS
-       ------------------------------------------------------------- */
-    
-    /* Button (Premium, NO gradients, sharp/subtle styling) */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 28px;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      border: none;
-    }
-
-    .btn-primary {
-      background-color: var(--accent-color);
-      color: #ffffff;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--accent-hover);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--text-color);
-      border: 2px solid var(--border-color);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-
-    /* Card Badge */
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      border-radius: 2px;
-      font-family: 'Cairo', sans-serif;
-      background-color: var(--accent-muted);
-      color: var(--accent-color);
-      border: 1px solid rgba(200, 132, 58, 0.3);
-    }
-
-    /* Grid container helper */
-    .grid {
-      display: grid;
-      gap: 30px;
-    }
-
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .grid-5 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-
-    /* Section container */
-    section {
-      padding: 80px 0;
-      position: relative;
-    }
-
     .container {
       width: 90%;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* Section Headers */
-    .section-header {
-      margin-bottom: 50px;
-      text-align: center;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .section-header h2 {
-      font-size: 2.2rem;
-      color: var(--text-color);
+    section {
+      padding: 100px 0;
       position: relative;
-      padding-bottom: 15px;
-      display: inline-block;
-    }
-
-    .section-header h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background-color: var(--accent-color);
-    }
-
-    .section-header p {
-      margin-top: 15px;
-      color: var(--text-muted);
-      font-size: 1.1rem;
     }
 
     /* -------------------------------------------------------------
-       3. LAYOUT: NAVIGATION HEADER
+       3. NAVIGATION BAR
        ------------------------------------------------------------- */
     header {
       position: fixed;
-      top: 0;
+      top: 4vh;
       left: 0;
       right: 0;
-      height: 80px;
+      height: 75px;
       background-color: var(--navbar-bg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
       z-index: 1000;
-      transition: all 0.3s ease;
+      transition: background-color 0.4s ease;
     }
 
     .navbar {
@@ -261,30 +177,37 @@
       align-items: center;
       height: 100%;
       padding: 0 5%;
-      max-width: 1400px;
+      max-width: 1300px;
       margin: 0 auto;
+      border-bottom: 1.5px solid var(--border-color);
     }
 
     .brand-logo {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 800;
       font-family: 'Cairo', sans-serif;
-      color: var(--text-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .brand-logo-accent {
+      font-weight: 300;
+      color: var(--accent-color);
     }
 
     .logo-container {
       position: relative;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--bg-card);
-      border: 1.5px solid var(--accent-color);
-      border-radius: 6px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
       overflow: hidden;
     }
 
@@ -298,21 +221,21 @@
       display: none;
       font-weight: 800;
       color: var(--accent-color);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 35px;
     }
 
     .nav-link {
       font-family: 'Cairo', sans-serif;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      padding: 8px 0;
+      padding: 5px 0;
       position: relative;
     }
 
@@ -326,7 +249,7 @@
       bottom: 0;
       right: 0;
       width: 0;
-      height: 2px;
+      height: 1.5px;
       background-color: var(--accent-color);
       transition: width 0.3s ease;
     }
@@ -336,19 +259,17 @@
       left: 0;
     }
 
-    /* Actions and theme switch */
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 20px;
     }
 
-    /* Theme Switch Button */
     .theme-toggle-btn {
       background: none;
       border: 1px solid var(--border-color);
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 4px;
       cursor: pointer;
       display: flex;
@@ -361,6 +282,7 @@
     .theme-toggle-btn:hover {
       border-color: var(--accent-color);
       color: var(--accent-color);
+      box-shadow: 0 0 10px var(--glow);
     }
 
     .theme-icon-sun { display: none; }
@@ -369,7 +291,6 @@
     [data-theme="light"] .theme-icon-sun { display: block; }
     [data-theme="light"] .theme-icon-moon { display: none; }
 
-    /* Mobile Menu Toggle */
     .menu-toggle {
       display: none;
       background: none;
@@ -378,20 +299,120 @@
       flex-direction: column;
       gap: 6px;
       padding: 5px;
-      z-index: 1001;
     }
 
     .menu-toggle span {
       display: block;
-      width: 25px;
-      height: 2px;
+      width: 22px;
+      height: 1.5px;
       background-color: var(--text-color);
       transition: all 0.3s ease;
     }
 
     /* -------------------------------------------------------------
-       4. ANIMATIONS (Scroll and Reveal)
+       4. PREMIUM BUTTONS & BADGES
        ------------------------------------------------------------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 32px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 2px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #ffffff;
+      border: 1.5px solid var(--accent-color);
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px var(--glow);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-color);
+      border: 1.5px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 2px;
+      font-family: 'Cairo', sans-serif;
+      background-color: var(--accent-muted);
+      color: var(--accent-color);
+      border: 1px solid rgba(200, 132, 58, 0.2);
+    }
+
+    /* -------------------------------------------------------------
+       5. EDITORIAL SECTIONS & ANIME
+       ------------------------------------------------------------- */
+    .section-header {
+      margin-bottom: 70px;
+      text-align: center;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--text-color);
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .section-header h2 strong {
+      font-family: 'Cairo', sans-serif;
+      font-weight: 900;
+      color: var(--accent-color);
+      display: block;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 1.5px;
+      background-color: var(--accent-color);
+    }
+
+    .section-header p {
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
     .reveal-on-scroll {
       opacity: 0;
       transform: translateY(30px);
@@ -403,39 +424,18 @@
       transform: translateY(0);
     }
 
-    /* Native CSS Scroll Animations using @supports */
-    @media (prefers-reduced-motion: no-preference) {
-      @supports ((animation-timeline: view()) and (animation-range: entry)) {
-        @keyframes revealUp {
-          from {
-            opacity: 0;
-            transform: translateY(35px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .scroll-reveal {
-          animation: revealUp auto linear backwards;
-          animation-timeline: view();
-          animation-range: entry 5% cover 25%;
-        }
-      }
-    }
-
-    /* Page transitions */
+    /* Page view structure */
     .page-view {
       display: none;
-      padding-top: 80px; /* offset navbar */
-      min-height: 100vh;
-      animation: pageFadeIn 0.5s ease forwards;
+      padding-top: 75px;
+      min-height: 92vh;
+      animation: pageFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     @keyframes pageFadeIn {
       from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(15px);
       }
       to {
         opacity: 1;
@@ -444,62 +444,64 @@
     }
 
     /* -------------------------------------------------------------
-       5. PAGE SPECIFIC: HOMEPAGE (#home)
+       6. HOMEPAGE (#home) - STANFORD DESIGN INSPIRED
        ------------------------------------------------------------- */
-    
-    /* Hero Section */
     .hero {
-      min-height: calc(100vh - 80px);
+      min-height: calc(92vh - 75px);
       display: flex;
       align-items: center;
-      padding: 60px 0;
-      background-image: var(--hero-overlay);
+      padding: 40px 0;
       position: relative;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
-      background-size: 24px 24px;
-      opacity: 0.15;
-      pointer-events: none;
-    }
-
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.95rem;
+      gap: 10px;
+      font-size: 0.85rem;
       font-weight: 700;
       color: var(--accent-color);
       background-color: var(--accent-muted);
-      padding: 6px 16px;
-      border-radius: 30px;
-      margin-bottom: 25px;
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 30px;
       border: 1px solid rgba(200, 132, 58, 0.25);
       font-family: 'Cairo', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .hero-content h1 {
-      font-size: 3rem;
+      font-size: 3.4rem;
       line-height: 1.25;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: var(--text-color);
+      font-family: 'Cairo', sans-serif;
+      font-weight: 900;
+    }
+
+    .hero-content h1 span.serif-brand {
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      color: var(--accent-color);
+      display: block;
+      font-size: 2.8rem;
+      margin-top: 10px;
     }
 
     .hero-content p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--text-muted);
-      margin-bottom: 35px;
-      max-width: 700px;
+      margin-bottom: 40px;
+      max-width: 680px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -507,18 +509,18 @@
     .hero-actions {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 45px;
+      margin-bottom: 60px;
     }
 
     .hero-stats {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      border-top: 1px solid var(--border-color);
-      padding-top: 30px;
-      max-width: 600px;
+      gap: 45px;
+      border-top: 1.5px solid var(--border-color);
+      padding-top: 35px;
+      max-width: 550px;
       margin: 0 auto;
     }
 
@@ -528,99 +530,260 @@
 
     .stat-val {
       font-family: 'Cairo', sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: var(--text-color);
       display: block;
+      margin-bottom: 2px;
     }
 
     .stat-lbl {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Section: Pillars */
-    .pillars-grid {
-      margin-top: 20px;
-    }
-
-    .pillar-card {
+    /* Pillars section: Row Layout (Exquisite look instead of standard grids) */
+    .pillars-section {
       background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 35px 25px;
-      border-radius: 6px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-top: 1.5px solid var(--border-color);
+      border-bottom: 1.5px solid var(--border-color);
+    }
+
+    .editorial-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 40px;
+    }
+
+    .pillar-row {
+      display: grid;
+      grid-template-columns: 100px 250px 1fr;
+      align-items: center;
+      padding: 30px 10px;
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.4s ease;
       position: relative;
+    }
+
+    .pillar-row:last-child {
+      border-bottom: none;
+    }
+
+    .pillar-row:hover {
+      background-color: rgba(200, 132, 58, 0.03);
+      padding-right: 25px;
+    }
+
+    .row-num {
+      font-family: 'Cairo', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent-color);
+      opacity: 0.4;
+    }
+
+    .row-title {
+      font-size: 1.4rem;
+      font-family: 'Cairo', sans-serif;
+      color: var(--text-color);
+    }
+
+    .row-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Teaser / Pathway callout */
+    .start-teaser {
+      border: 1px solid var(--border-color);
+      padding: 70px 50px;
+      border-radius: 4px;
+      text-align: center;
+      position: relative;
+      background: var(--bg-card);
       overflow: hidden;
     }
 
-    .pillar-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 3px;
-      height: 0;
-      background-color: var(--accent-color);
-      transition: height 0.3s ease;
+    .start-teaser h3 {
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
     }
 
-    .pillar-card:hover {
-      background-color: var(--bg-card-hover);
-      border-color: rgba(200, 132, 58, 0.4);
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px var(--shadow);
-    }
-
-    .pillar-card:hover::before {
-      height: 100%;
-    }
-
-    .pillar-num {
-      font-family: 'Cairo', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--accent-color);
-      opacity: 0.2;
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      line-height: 1;
-    }
-
-    .pillar-title {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      color: var(--text-color);
-      padding-left: 30px; /* clear space for absolute number */
-    }
-
-    .pillar-desc {
+    .start-teaser p {
       color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 35px auto;
+      font-size: 1.05rem;
+    }
+
+    /* Newsletter with clean input underline */
+    .newsletter-sec {
+      border-top: 1.5px solid var(--border-color);
+      border-bottom: 1.5px solid var(--border-color);
+      background-color: var(--bg-card);
+    }
+
+    .newsletter-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-container h3 {
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .newsletter-container p {
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .newsletter-input {
+      flex-grow: 1;
+      padding: 14px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid var(--border-color);
+      color: var(--text-color);
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.05rem;
+      outline: none;
+      transition: border-bottom-color 0.4s ease;
+    }
+
+    .newsletter-input:focus {
+      border-bottom-color: var(--accent-color);
+    }
+
+    .newsletter-success {
+      display: none;
+      margin-top: 20px;
+      color: var(--accent-color);
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
       font-size: 0.95rem;
     }
 
-    /* Section: Latest Episodes & Grid */
+    /* -------------------------------------------------------------
+       7. EPISODES PAGE ARCHIVE (#episodes)
+       ------------------------------------------------------------- */
+    .archive-controls {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      margin-bottom: 50px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 4px;
+      align-items: center;
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 45px 14px 20px;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 2px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 10px var(--glow);
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      width: 18px;
+      height: 18px;
+    }
+
+    .filters-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .filter-btn {
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 2px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .filter-btn.active {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: #ffffff;
+    }
+
+    /* Cards Grid */
+    .grid {
+      display: grid;
+      gap: 40px;
+    }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+
     .episode-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 6px;
+      border-radius: 4px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .episode-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(200, 132, 58, 0.4);
-      box-shadow: 0 10px 30px var(--shadow);
+      transform: translateY(-6px);
+      border-color: var(--border-hover);
+      box-shadow: 0 15px 35px var(--shadow), 0 0 15px var(--glow);
     }
 
     .thumb-wrapper {
       position: relative;
       aspect-ratio: 16/9;
-      background-color: #000000;
+      background-color: #000;
       overflow: hidden;
     }
 
@@ -628,27 +791,27 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.6s ease;
+      opacity: 0.8;
     }
 
     .episode-card:hover .thumb-img {
-      transform: scale(1.05);
+      transform: scale(1.04);
+      opacity: 0.95;
     }
 
     .thumb-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
-      opacity: 0.9;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 0.3s ease;
     }
 
     .play-btn-circle {
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       background-color: var(--accent-color);
       border-radius: 50%;
       display: flex;
@@ -656,7 +819,7 @@
       justify-content: center;
       color: #ffffff;
       transform: scale(0.9);
-      opacity: 0.85;
+      opacity: 0.8;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -670,16 +833,16 @@
       position: absolute;
       bottom: 10px;
       left: 10px;
-      background-color: rgba(0,0,0,0.75);
+      background-color: rgba(0,0,0,0.8);
       color: #ffffff;
       padding: 3px 8px;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-family: 'Cairo', sans-serif;
-      border-radius: 2px;
+      border-radius: 1px;
     }
 
     .episode-info {
-      padding: 20px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -694,21 +857,22 @@
 
     .episode-title {
       font-size: 1.15rem;
-      line-height: 1.4;
+      line-height: 1.45;
       margin-bottom: 10px;
       color: var(--text-color);
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      height: 48px;
+      height: 50px;
+      font-family: 'Cairo', sans-serif;
     }
 
     .episode-desc {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-      line-height: 1.5;
+      font-size: 0.88rem;
+      margin-bottom: 25px;
+      line-height: 1.6;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -721,7 +885,7 @@
       justify-content: space-between;
       align-items: center;
       border-top: 1px solid var(--border-color);
-      padding-top: 15px;
+      padding-top: 16px;
       margin-top: auto;
     }
 
@@ -740,233 +904,61 @@
     }
 
     .views-count {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
-    }
-
-    /* Start Here Preview / Callout */
-    .start-teaser {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 60px;
-      border-radius: 6px;
-      text-align: center;
-      margin-top: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .start-teaser-decor {
-      position: absolute;
-      width: 250px;
-      height: 250px;
-      background: radial-gradient(var(--accent-color) 0%, transparent 70%);
-      opacity: 0.05;
-      pointer-events: none;
-    }
-    
-    .start-teaser-decor.d1 { top: -100px; right: -100px; }
-    .start-teaser-decor.d2 { bottom: -100px; left: -100px; }
-
-    .start-teaser h3 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .start-teaser p {
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      font-size: 1.05rem;
-    }
-
-    /* Newsletter Section (Premium form styling) */
-    .newsletter-sec {
-      background-color: var(--bg-card);
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .newsletter-container {
-      max-width: 650px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .newsletter-container h3 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .newsletter-container p {
-      color: var(--text-muted);
-      margin-bottom: 30px;
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 12px;
-    }
-
-    .newsletter-input {
-      flex-grow: 1;
-      padding: 14px 20px;
-      background-color: var(--input-bg);
-      border: 1px solid var(--border-color);
-      color: var(--text-color);
-      font-family: 'Tajawal', sans-serif;
-      font-size: 1rem;
-      border-radius: 4px;
-      outline: none;
-      transition: border-color 0.3s ease;
-    }
-
-    .newsletter-input:focus {
-      border-color: var(--accent-color);
-    }
-
-    .newsletter-form button {
-      white-space: nowrap;
-    }
-
-    .newsletter-success {
-      display: none;
-      margin-top: 15px;
-      color: var(--accent-color);
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      animation: fadeInUp 0.4s ease forwards;
-    }
-
-    /* -------------------------------------------------------------
-       6. PAGE: EPISODES ARCHIVE (#episodes)
-       ------------------------------------------------------------- */
-    .archive-controls {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-bottom: 40px;
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 25px;
-      border-radius: 6px;
-    }
-
-    .search-wrapper {
-      position: relative;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 14px 45px 14px 20px;
-      background-color: var(--input-bg);
-      border: 1px solid var(--border-color);
-      color: var(--text-color);
-      font-family: 'Tajawal', sans-serif;
-      font-size: 1rem;
-      border-radius: 4px;
-      outline: none;
-      transition: all 0.3s ease;
-    }
-
-    .search-input:focus {
-      border-color: var(--accent-color);
-      box-shadow: 0 0 10px rgba(200, 132, 58, 0.1);
-    }
-
-    .search-icon {
-      position: absolute;
-      top: 50%;
-      right: 18px;
-      transform: translateY(-50%);
-      color: var(--text-muted);
-      pointer-events: none;
-      width: 18px;
-      height: 18px;
-    }
-
-    .filters-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .filter-btn {
-      background-color: var(--bg-color);
-      border: 1px solid var(--border-color);
-      color: var(--text-muted);
-      padding: 8px 18px;
-      border-radius: 4px;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .filter-btn:hover {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
-    }
-
-    .filter-btn.active {
-      background-color: var(--accent-color);
-      border-color: var(--accent-color);
-      color: #ffffff;
     }
 
     .no-results {
-      grid-column: 1 / -1;
       text-align: center;
-      padding: 50px;
+      padding: 60px;
       border: 1px dashed var(--border-color);
-      border-radius: 6px;
+      border-radius: 4px;
       color: var(--text-muted);
       display: none;
     }
 
     /* -------------------------------------------------------------
-       7. PAGE: BOOKS LIBRARY (#books)
+       8. BOOKS GALLERY (#books) - INTERACTIVE 3D EFFECTS
        ------------------------------------------------------------- */
     .books-grid {
-      margin-top: 20px;
+      margin-top: 30px;
+      gap: 40px;
     }
 
     .book-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 30px 20px;
+      border-radius: 4px;
+      padding: 35px 25px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      perspective: 1000px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .book-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(200, 132, 58, 0.4);
-      box-shadow: 0 15px 35px var(--shadow);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px var(--shadow), 0 0 20px var(--glow);
     }
 
-    /* 3D-ish CSS-styled book cover */
+    /* 3D realistic responsive cover container */
     .book-cover-3d {
       width: 140px;
-      height: 200px;
+      height: 205px;
       margin-bottom: 25px;
       position: relative;
-      perspective: 1000px;
       transform-style: preserve-3d;
+      transform: rotateY(-10deg);
+      transition: transform 0.1s ease; /* fast follow mouse tilt */
     }
 
     .book-spine {
       position: absolute;
       top: 0;
       right: 0;
-      width: 12px;
+      width: 14px;
       height: 100%;
       background: linear-gradient(to right, #8a5722 0%, #c8843a 50%, #8a5722 100%);
       transform-origin: right center;
@@ -977,81 +969,74 @@
     .book-front {
       width: 100%;
       height: 100%;
-      background-color: #171513;
-      border-left: 4px solid rgba(0,0,0,0.25);
       border-radius: 0 4px 4px 0;
-      box-shadow: -5px 5px 15px rgba(0,0,0,0.4);
+      box-shadow: -5px 5px 20px rgba(0,0,0,0.55);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 15px;
+      padding: 20px 15px;
       color: #f5f2eb;
       position: relative;
       overflow: hidden;
       border: 1.5px solid var(--accent-color);
-      transform: rotateY(-10deg);
-      transform-origin: right center;
-      transition: transform 0.4s ease;
-    }
-
-    .book-card:hover .book-front {
-      transform: rotateY(-22deg);
+      transform: translateZ(0px);
     }
 
     .book-front-decor {
       position: absolute;
-      top: -20px;
-      right: -20px;
+      top: -25px;
+      right: -25px;
       width: 80px;
       height: 80px;
-      border: 1px solid rgba(200, 132, 58, 0.2);
+      border: 1.5px solid rgba(200, 132, 58, 0.25);
       transform: rotate(45deg);
     }
 
     .book-cover-title {
       font-family: 'Cairo', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       font-weight: 800;
       color: var(--accent-color);
-      line-height: 1.3;
-      margin-top: 15px;
+      line-height: 1.4;
       text-align: right;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
     .book-cover-author {
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       color: #b5af9f;
       text-align: left;
       font-family: 'Tajawal', sans-serif;
       border-top: 1px solid rgba(200, 132, 58, 0.2);
-      padding-top: 5px;
+      padding-top: 6px;
     }
 
     .book-info-title {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
       color: var(--text-color);
+      font-family: 'Cairo', sans-serif;
     }
 
     .book-author {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       margin-bottom: 12px;
     }
 
     .book-card .badge {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .book-episode-link {
       font-family: 'Cairo', sans-serif;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--accent-color);
       margin-top: auto;
-      border: 1px solid var(--border-color);
-      padding: 8px 18px;
-      border-radius: 4px;
+      border: 1.5px solid var(--border-color);
+      padding: 8px 24px;
+      border-radius: 2px;
       width: 100%;
       transition: all 0.3s ease;
     }
@@ -1063,53 +1048,54 @@
     }
 
     /* -------------------------------------------------------------
-       8. PAGE: ABOUT THE CHANNEL (#about)
+       9. ABOUT THE CHANNEL (#about)
        ------------------------------------------------------------- */
     .about-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 50px;
+      gap: 60px;
     }
 
     .about-hero {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
+      gap: 50px;
       align-items: center;
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      padding: 50px;
-      border-radius: 6px;
+      padding: 60px;
+      border-radius: 4px;
     }
 
     .about-hero-text h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
       color: var(--text-color);
     }
 
     .about-hero-text p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
       margin-bottom: 20px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .about-hero-visual {
       display: flex;
       justify-content: center;
-      position: relative;
     }
 
     .about-badge-card {
       background-color: var(--bg-color);
       border: 1.5px solid var(--accent-color);
-      padding: 30px;
-      border-radius: 6px;
+      padding: 35px;
+      border-radius: 4px;
       text-align: center;
       width: 100%;
       max-width: 280px;
-      box-shadow: 0 15px 30px var(--shadow);
+      box-shadow: 0 15px 35px var(--shadow), 0 0 20px var(--glow);
       position: relative;
     }
 
@@ -1117,85 +1103,126 @@
       content: '';
       position: absolute;
       inset: -5px;
-      border: 1px dashed var(--accent-color);
-      opacity: 0.3;
-      border-radius: 10px;
+      border: 1.5px dashed var(--accent-color);
+      opacity: 0.25;
+      border-radius: 6px;
       pointer-events: none;
     }
 
     .about-badge-card .logo-container {
       margin: 0 auto 20px auto;
-      width: 80px;
-      height: 80px;
+      width: 75px;
+      height: 75px;
     }
 
     .about-badge-card .logo-container .logo-fallback {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .about-subs {
       font-family: 'Cairo', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
+      font-size: 2.2rem;
+      font-weight: 900;
       color: var(--accent-color);
-      line-height: 1.2;
+      line-height: 1.1;
       display: block;
       margin-bottom: 5px;
     }
 
     .about-subs-lbl {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-manifesto-grid {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 50px;
+      border-radius: 4px;
+    }
+
+    .about-manifesto-grid h3 {
+      font-family: 'Amiri', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .manifesto-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .manifesto-col {
+      padding: 24px;
+      border-right: 3px solid var(--accent-color);
+      background-color: var(--bg-color);
+    }
+
+    .manifesto-col h4 {
+      font-family: 'Cairo', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+
+    .manifesto-col p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
     /* -------------------------------------------------------------
-       9. PAGE: START HERE / DYNAMIC QUIZ (#start)
+       10. START HERE / DYNAMIC PLAYLISTS (#start)
        ------------------------------------------------------------- */
     .start-container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
     .problems-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 50px;
+      gap: 25px;
+      margin-bottom: 60px;
     }
 
     .problem-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 35px 20px;
+      border-radius: 4px;
+      padding: 40px 25px;
       text-align: center;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
     }
 
     .problem-icon-wrapper {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       background-color: var(--accent-muted);
       color: var(--accent-color);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
-      font-size: 1.5rem;
-      border: 1px solid rgba(200, 132, 58, 0.25);
+      margin-bottom: 22px;
+      font-size: 1.4rem;
+      border: 1.5px solid rgba(200, 132, 58, 0.25);
       transition: all 0.3s ease;
     }
 
     .problem-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent-color);
-      box-shadow: 0 10px 25px var(--shadow);
+      box-shadow: 0 10px 25px var(--shadow), 0 0 15px var(--glow);
     }
 
     .problem-card:hover .problem-icon-wrapper {
@@ -1206,7 +1233,7 @@
     .problem-card.selected {
       border-color: var(--accent-color);
       background-color: var(--bg-card-hover);
-      box-shadow: 0 10px 25px var(--shadow);
+      box-shadow: 0 15px 30px var(--shadow), 0 0 20px var(--glow);
     }
 
     .problem-card.selected .problem-icon-wrapper {
@@ -1216,16 +1243,16 @@
 
     .problem-title {
       font-family: 'Cairo', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--text-color);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .problem-desc {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     /* Curated Results Panel */
@@ -1233,9 +1260,9 @@
       display: none;
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      padding: 40px;
-      animation: fadeInUp 0.5s ease forwards;
+      border-radius: 4px;
+      padding: 45px;
+      animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     .curated-title-area {
@@ -1250,12 +1277,12 @@
     }
 
     .curated-label {
-      font-family: 'Cairo', sans-serif;
-      font-size: 1.4rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.6rem;
       color: var(--text-color);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .curated-label::before {
@@ -1269,15 +1296,16 @@
 
     .curated-desc {
       color: var(--text-muted);
-      margin-bottom: 30px;
-      font-size: 1.05rem;
+      margin-bottom: 35px;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
-    /* Custom high-fidelity horizontal step progression */
+    /* Step sequential list */
     .steps-timeline {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 30px;
       position: relative;
     }
 
@@ -1287,7 +1315,7 @@
       top: 0;
       bottom: 0;
       right: 25px;
-      width: 2px;
+      width: 1.5px;
       background-color: var(--border-color);
       z-index: 1;
     }
@@ -1295,7 +1323,7 @@
     .step-item {
       display: grid;
       grid-template-columns: 50px 1fr;
-      gap: 20px;
+      gap: 25px;
       position: relative;
       z-index: 2;
       align-items: start;
@@ -1319,29 +1347,31 @@
     .step-item:hover .step-num-node {
       border-color: var(--accent-color);
       color: var(--accent-color);
+      box-shadow: 0 0 10px var(--glow);
     }
 
     .step-content-card {
       background-color: var(--bg-color);
       border: 1px solid var(--border-color);
       border-radius: 4px;
-      padding: 20px 25px;
+      padding: 24px;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
       transition: all 0.3s ease;
     }
 
     .step-content-card:hover {
-      border-color: rgba(200, 132, 58, 0.3);
+      border-color: var(--border-hover);
       background-color: var(--bg-card-hover);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 
     .step-thumb {
-      width: 120px;
+      width: 125px;
       aspect-ratio: 16/9;
-      background-color: #000000;
-      border-radius: 4px;
+      background-color: #000;
+      border-radius: 2px;
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -1354,12 +1384,13 @@
       font-size: 1.1rem;
       margin-bottom: 5px;
       color: var(--text-color);
+      font-family: 'Cairo', sans-serif;
     }
 
     .step-summary {
       font-size: 0.85rem;
       color: var(--text-muted);
-      line-height: 1.4;
+      line-height: 1.5;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -1368,7 +1399,7 @@
 
     .step-action-btn {
       color: var(--accent-color);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1380,40 +1411,40 @@
 
     .step-content-card:hover .step-action-btn {
       background-color: var(--accent-muted);
-      border-color: rgba(200, 132, 58, 0.2);
+      border-color: rgba(200, 132, 58, 0.15);
     }
 
     /* -------------------------------------------------------------
-       10. LAYOUT: FOOTER
+       11. LAYOUT FOOTER
        ------------------------------------------------------------- */
     footer {
       background-color: var(--bg-card);
-      border-top: 1px solid var(--border-color);
-      padding: 50px 0 30px 0;
-      font-size: 0.95rem;
+      border-top: 1.5px solid var(--border-color);
+      padding: 60px 0 40px 0;
+      font-size: 0.9rem;
       color: var(--text-muted);
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
+      gap: 50px;
+      margin-bottom: 50px;
     }
 
     .footer-brand h4 {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: var(--text-color);
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .footer-brand p {
-      line-height: 1.6;
-      margin-bottom: 20px;
-      max-width: 350px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      max-width: 380px;
     }
 
     .footer-socials {
@@ -1422,8 +1453,8 @@
     }
 
     .social-btn {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 4px;
       border: 1px solid var(--border-color);
       display: flex;
@@ -1440,13 +1471,15 @@
     }
 
     .footer-links h5 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-color);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .footer-links li {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .footer-links a:hover {
@@ -1455,9 +1488,8 @@
 
     .footer-bottom {
       border-top: 1px solid var(--border-color);
-      padding-top: 25px;
-      text-align: center;
-      font-size: 0.85rem;
+      padding-top: 30px;
+      font-size: 0.8rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1466,46 +1498,61 @@
     }
 
     /* -------------------------------------------------------------
-       11. RESPONSIVENESS (Mobile-first styles)
+       12. RESPONSIVE MEDIA STYLES
        ------------------------------------------------------------- */
     @media (max-width: 991px) {
       .about-hero {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 40px;
       }
       .about-badge-card {
         margin: 0 auto;
       }
+      .manifesto-cols {
+        grid-template-columns: 1fr;
+      }
+      .archive-controls {
+        grid-template-columns: 1fr;
+      }
+      .filters-wrapper {
+        justify-content: flex-start;
+      }
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2.2rem !important; }
-      .section-header h2 { font-size: 1.8rem; }
-      
-      .navbar {
-        padding: 0 4%;
+      body {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+      }
+      .cinematic-bar {
+        height: 3vh;
+      }
+      header {
+        top: 3vh;
       }
 
-      /* Mobile Slide-down Menu */
       .menu-toggle {
         display: flex;
       }
 
       .nav-menu {
         position: absolute;
-        top: 80px;
+        top: 75px;
         left: 0;
         right: 0;
         background-color: var(--bg-card);
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1.5px solid var(--border-color);
         flex-direction: column;
         gap: 0;
         padding: 20px 0;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.4);
       }
 
       .nav-menu.open {
@@ -1518,13 +1565,17 @@
         width: 100%;
         text-align: center;
         padding: 15px 0;
-        border-bottom: 1px solid rgba(200, 132, 58, 0.05);
+        border-bottom: 1px solid rgba(200, 132, 58, 0.04);
       }
       
       .nav-link::after { display: none; }
 
       .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+      }
+
+      .hero-content h1 span.serif-brand {
+        font-size: 1.9rem;
       }
 
       .hero-content p {
@@ -1534,6 +1585,13 @@
       .hero-stats {
         flex-wrap: wrap;
         gap: 20px;
+      }
+
+      .pillar-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 25px 0;
+        text-align: center;
       }
 
       .problems-grid {
@@ -1571,7 +1629,6 @@
       }
     }
 
-    /* Burger Menu Active Animation */
     .menu-toggle.open span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
@@ -1586,6 +1643,12 @@
   </style>
 </head>
 <body>
+
+  <!-- Cinematic Borders -->
+  <div class="cinematic-bar top"></div>
+  <div class="cinematic-bar bottom"></div>
+
+  <!-- Interactive canvas layout background -->
   <canvas id="bg-canvas"></canvas>
 
   <!-- -------------------------------------------------------------
@@ -1598,7 +1661,7 @@
           <img src="logo.png" alt="Book Breakdown AR" class="logo-img" id="main-logo-img">
           <div class="logo-fallback" id="logo-text-fallback">BB</div>
         </div>
-        <span>Book Breakdown AR</span>
+        <span>Book <span class="brand-logo-accent">Breakdown</span></span>
       </a>
 
       <nav class="nav-menu" id="nav-menu">
@@ -1611,10 +1674,10 @@
 
       <div class="nav-actions">
         <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="تبديل المظهر">
-          <!-- Sun Icon (SVG) -->
-          <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          <!-- Moon Icon (SVG) -->
-          <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <!-- Sun Icon -->
+          <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <!-- Moon Icon -->
+          <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">
@@ -1631,90 +1694,95 @@
        ------------------------------------------------------------- -->
   <div id="home" class="page-view">
     <main>
-      <!-- Hero -->
+      <!-- Hero Section -->
       <section class="hero">
         <div class="container">
           <div class="hero-content reveal-on-scroll">
             <span class="hero-tag">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              أول بودكاست عربي لتفكيك النظم الفكرية والمالية
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.507 9.388.507 9.388.507s7.518 0 9.388-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              الوجهة الأولى لشرح الكتب العالمية بأسلوب البودكاست
             </span>
-            <h1>الكتب التي لا يريدونك أن تفهمها... والأنظمة التي تدير حياتك</h1>
-            <p>نحن لا نلخص الكتب، بل نشرح الأنظمة الخفية التي تتحكم في مجتمعاتنا وحياتنا المالية والنفسية. بأسلوب حواري صادم، شيق، ويطرح الأسئلة الصعبة.</p>
+            <h1>
+              الكتب التي لا يريدونك أن تفهمها...
+              <span class="serif-brand">والأنظمة التي تدير حياتك خفية</span>
+            </h1>
+            <p>نحن لا نلخص الكتب. نحن نشرح الأنظمة الخفية التي تتحكم في مجتمعاتنا وحياتنا المالية والنفسية بأسلوب بودكاست حواري نقدي وممتع.</p>
+            
             <div class="hero-actions">
               <a href="https://www.youtube.com/@BookBreakdownAR" target="_blank" rel="noopener" class="btn btn-primary">
                 اشترك في يوتيوب
               </a>
               <a href="#start" class="btn btn-secondary">
-                ابدأ رحلتك هنا
+                ابدأ رحلة التغيير
               </a>
             </div>
             
             <div class="hero-stats">
               <div class="stat-item">
                 <span class="stat-val">+130</span>
-                <span class="stat-lbl">فيديو وحلقة</span>
+                <span class="stat-lbl">حلقة وتفكيك</span>
               </div>
               <div class="stat-item">
                 <span class="stat-val">+550</span>
-                <span class="stat-lbl">مشترك حقيقي</span>
+                <span class="stat-lbl">عقل متحرر</span>
               </div>
               <div class="stat-item">
                 <span class="stat-val">2.5K</span>
-                <span class="stat-lbl">مشاهدة لأقوى فيديو</span>
+                <span class="stat-lbl">مشاهدات الفيديو الأقوى</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Content Pillars -->
-      <section style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <!-- Content Pillars (Editorial Row Layout) -->
+      <section class="pillars-section">
         <div class="container">
           <div class="section-header reveal-on-scroll">
-            <h2>خماسية الوعي والسيادة</h2>
-            <p>خمس ركائز نقوم بتشريحها وتفكيكها بالكامل لبناء عقل حر قادر على رؤية ما وراء الستار.</p>
+            <h2>
+              <strong>The Pillars</strong>
+              خماسية الوعي والسيادة الشخصية
+            </h2>
+            <p>خمس ركائز أساسية نقوم بتشريحها وتفكيكها بالكامل لبناء عقل حر قادر على رؤية النظم الحاكمة لحياتنا.</p>
           </div>
 
-          <div class="grid grid-5 pillars-grid">
-            <div class="pillar-card reveal-on-scroll">
-              <span class="pillar-num">01</span>
-              <h3 class="pillar-title">المال</h3>
-              <p class="pillar-desc">شفرة الحرية المالية وتفكيك عبودية الوظيفة وأوهام التمويل العقاري والديون.</p>
+          <div class="editorial-pillars">
+            <div class="pillar-row reveal-on-scroll">
+              <span class="row-num">٠١</span>
+              <h3 class="row-title">المال والحرية</h3>
+              <p class="row-desc">شفرة المال التي لم يعلموها لك في المدرسة لتتحرر من ساقية الديون وعقم التمويل العقاري.</p>
             </div>
-            <div class="pillar-card reveal-on-scroll">
-              <span class="pillar-num">02</span>
-              <h3 class="pillar-title">القوة</h3>
-              <p class="pillar-desc">قوانين السطوة والاستراتيجية السياسية والاجتماعية التي تحرك خيوط اللعبة.</p>
+            <div class="pillar-row reveal-on-scroll">
+              <span class="row-num">٠٢</span>
+              <h3 class="row-title">القوة والسطوة</h3>
+              <p class="row-desc">قوانين السطوة وكيف تدار خيوط اللعبة من خلف الكواليس وتسيطر على واقعك الفردي والمهني.</p>
             </div>
-            <div class="pillar-card reveal-on-scroll">
-              <span class="pillar-num">03</span>
-              <h3 class="pillar-title">الوعي</h3>
-              <p class="pillar-desc">فك شفرة البرمجة الفكرية والاجتماعية التي نشأت عليها واسترداد إدراكك.</p>
+            <div class="pillar-row reveal-on-scroll">
+              <span class="row-num">٠٣</span>
+              <h3 class="row-title">الوعي الذاتي</h3>
+              <p class="row-desc">تدمير الأوهام والبرمجة الاجتماعية التي نشأت عليها واسترداد إدراكك الكامل لحريتك.</p>
             </div>
-            <div class="pillar-card reveal-on-scroll">
-              <span class="pillar-num">04</span>
-              <h3 class="pillar-title">الأعمال</h3>
-              <p class="pillar-desc">كشف خرافة ريادة الأعمال وصعوبات التأسيس والأنظمة الحقيقية وراء الشركات الناجحة.</p>
+            <div class="pillar-row reveal-on-scroll">
+              <span class="row-num">٠٤</span>
+              <h3 class="row-title">ريادة الأعمال</h3>
+              <p class="row-desc">كشف خرافة ريادة الأعمال وصعوباتها الحقيقية وكيف تبني نظاماً يخدمك بدلاً من التحول لعبد لمشروعك.</p>
             </div>
-            <div class="pillar-card reveal-on-scroll">
-              <span class="pillar-num">05</span>
-              <h3 class="pillar-title">علم النفس</h3>
-              <p class="pillar-desc">سيكولوجية اتخاذ القرار وسلوك الجماهير والظل النفسي الذي يتحكم بقراراتنا دون علمنا.</p>
+            <div class="pillar-row reveal-on-scroll">
+              <span class="row-num">٠٥</span>
+              <h3 class="row-title">علم النفس</h3>
+              <p class="row-desc">سيكولوجية اتخاذ القرار وسلوك الجماهير والظل النفسي الذي يتحكم بقراراتك المالية واليومية دون علمك.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Featured / Start Here Intro -->
+      <!-- Start Teaser -->
       <section>
         <div class="container">
           <div class="start-teaser reveal-on-scroll">
-            <div class="start-teaser-decor d1"></div>
-            <div class="start-teaser-decor d2"></div>
-            <h3>هل أنت جاهز لتحدي قناعاتك؟</h3>
-            <p>لا تتصفح بشكل عشوائي. لقد قمنا بتنظيم مسارات استماع مخصصة لحل المشاكل الحقيقية التي تؤرقك حالياً في حياتك المهنية أو المالية.</p>
-            <a href="#start" class="btn btn-primary">ابدأ مسار التغيير المخصص</a>
+            <h3>أين تجد مشكلتك الآن؟</h3>
+            <p>لقد قمنا بتنظيم مسارات استماع متسلسلة لحل التحديات الحقيقية التي تواجهك حالياً في حياتك المهنية أو المالية.</p>
+            <a href="#start" class="btn btn-primary">ابدأ مسار التحرر المخصص</a>
           </div>
         </div>
       </section>
@@ -1723,16 +1791,19 @@
       <section style="background-color: var(--bg-card); border-top: 1px solid var(--border-color);">
         <div class="container">
           <div class="section-header reveal-on-scroll">
-            <h2>آخر الحلقات الصادمة</h2>
-            <p>شاهد أحدث إصداراتنا التي نسلط فيها الضوء على حقائق غائبة من أفضل الكتب العالمية.</p>
+            <h2>
+              <strong>New Releases</strong>
+              أحدث الحلقات والتشريحات
+            </h2>
+            <p>أبرز الفيديوهات المنشورة حديثاً على القناة بأسلوب حواري يطرح الأسئلة الصعبة.</p>
           </div>
 
           <div class="grid grid-3" id="home-latest-episodes">
             <!-- Dynamically populated via JS -->
           </div>
 
-          <div style="text-align: center; margin-top: 50px;" class="reveal-on-scroll">
-            <a href="#episodes" class="btn btn-secondary">عرض جميع الحلقات والأرشيف</a>
+          <div style="text-align: center; margin-top: 60px;" class="reveal-on-scroll">
+            <a href="#episodes" class="btn btn-secondary">تصفح الأرشيف الكامل للحلقات</a>
           </div>
         </div>
       </section>
@@ -1741,13 +1812,13 @@
       <section class="newsletter-sec">
         <div class="container">
           <div class="newsletter-container reveal-on-scroll">
-            <h3>انضم إلى مجتمع التحرر الفكري</h3>
-            <p>لا تفوت التحليلات الخاصة التي نرسلها فقط لأعضاء القائمة البريدية. أفكار عميقة ومقالات مخصصة غير منشورة على القناة.</p>
+            <h3>انضم إلى قائمة العقول الواعية</h3>
+            <p>أفكار نقدية ومقالات مخصصة لتحليل النظم المالية والنفسية نرسلها مباشرة لبريدك، غير منشورة على يوتيوب.</p>
             <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
               <input type="email" class="newsletter-input" placeholder="أدخل بريدك الإلكتروني هنا..." required>
-              <button type="submit" class="btn btn-primary">انضم الآن</button>
+              <button type="submit" class="btn btn-primary">اشترك الآن</button>
             </form>
-            <div class="newsletter-success" id="newsletter-success">تم تسجيلك بنجاح! ترقب رسائلنا قريباً.</div>
+            <div class="newsletter-success" id="newsletter-success">تم تسجيل بريدك بنجاح! انتظر مراسلاتنا قريباً.</div>
           </div>
         </div>
       </section>
@@ -1760,14 +1831,17 @@
   <div id="episodes" class="page-view">
     <main class="container">
       <div class="section-header" style="margin-top: 40px;">
-        <h2>أرشيف الحلقات الكامل</h2>
-        <p>تصفح، صنف، وابحث في كافة الحلقات المنشورة على القناة. نظام تفكيك متكامل بين يديك.</p>
+        <h2>
+          <strong>The Archive</strong>
+          أرشيف تفكيك الأنظمة
+        </h2>
+        <p>ابحث وصنف الحلقات والكتب التي قمنا بتشريحها بالتفصيل.</p>
       </div>
 
       <!-- Control Panel -->
       <div class="archive-controls">
         <div class="search-wrapper">
-          <input type="text" class="search-input" id="search-input" placeholder="ابحث عن حلقة، فكرة، أو اسم كتاب..." oninput="filterEpisodes()">
+          <input type="text" class="search-input" id="search-input" placeholder="ابحث عن عنوان حلقة، كاتب أو فكرة..." oninput="filterEpisodes()">
           <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -1789,8 +1863,8 @@
       
       <!-- No Results -->
       <div class="no-results" id="no-results-msg">
-        <h3>لا توجد نتائج مطابقة لبحثك</h3>
-        <p style="margin-top: 10px; color: var(--text-muted);">حاول استخدام كلمات مفتاحية أخرى أو غير تصنيف التصفح.</p>
+        <h3>لا توجد حلقات مطابقة لعملية البحث</h3>
+        <p style="margin-top: 10px; color: var(--text-muted);">حاول تغيير كلمات البحث أو اختيار تصنيف آخر.</p>
       </div>
 
       <div style="margin-bottom: 80px;"></div>
@@ -1803,8 +1877,11 @@
   <div id="books" class="page-view">
     <main class="container">
       <div class="section-header" style="margin-top: 40px;">
-        <h2>مكتبة التشريح الفكري</h2>
-        <p>الكتب العالمية الأكثر تأثيراً والتي قمنا بتفكيك أفكارها وتطبيقها على واقعنا بأسلوب البودكاست.</p>
+        <h2>
+          <strong>The Library</strong>
+          مكتبة التشريح والتحليل
+        </h2>
+        <p>الكتب العالمية الأكثر شهرة التي قمنا بتشريحها وتطبيق أفكارها على واقعنا اليومي.</p>
       </div>
 
       <div class="grid grid-3 books-grid" id="books-grid">
@@ -1821,17 +1898,20 @@
   <div id="about" class="page-view">
     <main class="container">
       <div class="section-header" style="margin-top: 40px;">
-        <h2>حول مبادرة Book Breakdown AR</h2>
-        <p>لماذا نؤمن أن قراءة ما بين السطور وتفكيك المفاهيم السائدة هما الخطوة الأولى للحرية الفكرية؟</p>
+        <h2>
+          <strong>Our Mission</strong>
+          عن مبادرة Book Breakdown AR
+        </h2>
+        <p>قصتنا، غايتنا، ولماذا نؤمن أن تفكيك السائد هو طريق التحرر الفكري والمالي الوحيد.</p>
       </div>
 
       <div class="about-wrapper">
         <div class="about-hero">
           <div class="about-hero-text">
-            <h3>نحن لا نلخص الكتب، بل نكشف ما وراءها</h3>
-            <p>هناك المئات من القنوات التي تقدم ملخصات سريعة ومملة للكتب. تلك القنوات تمنحك فقط وهماً بالمعرفة، وتمر على الأفكار مرور الكرام لتسير مع التيار السائد.</p>
-            <p>في <strong>Book Breakdown AR</strong>، نتبنى منهجاً مختلفاً تماماً. نسلط الضوء على الأفكار الاستفزازية، نتحدى المعتقدات المبرمجة التي نشأت عليها، ونشرح لك النظم الاقتصادية والنفسية التي تحكم حياتك كالفخ، دون أن تشعر.</p>
-            <p>إن قراءتنا نقدية، وبودكاستنا حواري، غرضه الأساسي تزويدك بالوعي الكافي لتتحكم بنفسك وتهرب من الأوهام الجماعية السائدة.</p>
+            <h3>لا نلخص الكتب... بل ننقد الأنظمة</h3>
+            <p>معظم القنوات تقدم ملخصات سريعة وبسيطة تمنح المشاهدين مجرد وهم بالمعرفة وتمر على المفاهيم مروراً سريعاً لتسير مع التيار.</p>
+            <p>في <strong>Book Breakdown AR</strong>، غايتنا مختلفة تماماً. نحن نغوص عميقاً في الأفكار غير المألوفة، نتحدى المعتقدات المبرمجة التي نشأنا عليها، ونشرح الأنظمة المالية والنفسية التي تحكم واقعنا كالفخ دون أن نشعر.</p>
+            <p>أطروحتنا حرة، ونقدنا مباشر، وهدفنا الأساسي هو تزويدك بالإدراك اللازم لتتحرر فكرياً وتستعيد السيطرة على مسار حياتك.</p>
           </div>
           <div class="about-hero-visual">
             <div class="about-badge-card">
@@ -1840,28 +1920,28 @@
                 <div class="logo-fallback">BB</div>
               </div>
               <span class="about-subs">+550</span>
-              <span class="about-subs-lbl">عقل متحرر مشترك</span>
-              <div style="margin-top: 20px;">
-                <a href="https://www.youtube.com/@BookBreakdownAR" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; font-size: 0.85rem;">اشترك في يوتيوب</a>
+              <span class="about-subs-lbl">عقل واعٍ مشترك</span>
+              <div style="margin-top: 25px;">
+                <a href="https://www.youtube.com/@BookBreakdownAR" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; font-size: 0.8rem;">اشترك في يوتيوب</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 40px; border-radius: 6px;">
-          <h3 style="font-size: 1.6rem; margin-bottom: 25px; text-align: center; font-family: 'Cairo', sans-serif;">المبادئ الخمسة التي نلتزم بها في طرحنا</h3>
-          <div class="grid grid-3" style="gap: 20px; margin-top: 20px;">
-            <div style="padding: 20px; border-right: 3px solid var(--accent-color); background-color: var(--bg-color); border-radius: 0 4px 4px 0;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 8px;">1. الشفافية التامة والصدمة الإيجابية</h4>
-              <p style="font-size: 0.9rem; color: var(--text-muted);">الحقيقة نادراً ما تكون مريحة. نحن لا نجمل الواقع ولا نقدم نصائح براقة لا قيمة لها، بل نضع المشاهد وجهاً لوجه أمام الحقيقة المجردة.</p>
+        <div class="about-manifesto-grid">
+          <h3>المبادئ الثلاثة التي يرتكز عليها طرحنا</h3>
+          <div class="manifesto-cols">
+            <div class="manifesto-col">
+              <h4>1. الصدمة الإيجابية للحقيقة</h4>
+              <p>الحقائق الصادمة نادراً ما تكون مريحة. نحن لا نجمل الأنظمة ولا نقدم حلولاً براقة زائفة، بل نواجه القناعات الموروثة مباشرة.</p>
             </div>
-            <div style="padding: 20px; border-right: 3px solid var(--accent-color); background-color: var(--bg-color); border-radius: 0 4px 4px 0;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 8px;">2. الربط بالواقع المحيط</h4>
-              <p style="font-size: 0.9rem; color: var(--text-muted);">الأفكار النظرية لا قيمة لها إن لم تنعكس على سلوكك اليومي، محفظتك المالية، وعلاقاتك بالقوة والمجتمع من حولك.</p>
+            <div class="manifesto-col">
+              <h4>2. التطبيق والربط بالواقع</h4>
+              <p>الأفكار النظرية لا قيمة لها إن لم تنعكس على سلوكك المالي، وظيفتك، وفهمك اليومي للقوة والسيطرة من حولك.</p>
             </div>
-            <div style="padding: 20px; border-right: 3px solid var(--accent-color); background-color: var(--bg-color); border-radius: 0 4px 4px 0;">
-              <h4 style="font-size: 1.1rem; margin-bottom: 8px;">3. محاربة الأوهام المبرمجة</h4>
-              <p style="font-size: 0.9rem; color: var(--text-muted);">من الوظيفة التقليدية الآمنة إلى شراء منزل بالديون، نفكك النماذج التي صممتها الأنظمة لضمان بقائك منخرطاً داخل الساقية.</p>
+            <div class="manifesto-col">
+              <h4>3. محاربة أوهام البرمجة</h4>
+              <p>من عبودية الوظيفة الآمنة إلى ديون المنازل، نفكك النماذج التي صُممت لإبقاء عقولنا خاضعة داخل عجلة الاستهلاك اللانهائية.</p>
             </div>
           </div>
         </div>
@@ -1877,44 +1957,46 @@
   <div id="start" class="page-view">
     <main class="container">
       <div class="section-header" style="margin-top: 40px;">
-        <h2>دليل التحرر والبدء</h2>
-        <p>لا تتشتت بين الحلقات. حدد المشكلة الكبرى التي تواجهها الآن، وسنوجهك مباشرة إلى مسار الحلقات التي تفكك هذا الفخ تحديداً.</p>
+        <h2>
+          <strong>Step By Step</strong>
+          دليلك المخصص للبدء والتحرر
+        </h2>
+        <p>لا تتشتت بين الحلقات. حدد التحدي الأكبر الذي تواجهه حالياً وسنرسم لك مسار الاستماع التسلسلي لحل المشكلة.</p>
       </div>
 
       <div class="start-container">
-        <!-- Problems grid selector -->
         <div class="problems-grid">
           <div class="problem-card" onclick="selectProblem('money', this)">
             <div class="problem-icon-wrapper">💸</div>
             <h3 class="problem-title">أنا تعبان ماليًا</h3>
-            <p class="problem-desc">أواجه مشاكل مادية، غارق في التزامات أو ديون، وأشعر بالدوران اللانهائي داخل ساقية الوظيفة.</p>
+            <p class="problem-desc">أعاني من الالتزامات والديون وأشعر أنني عالق داخل ساقية الوظيفة ووهج الاستهلاك اليومي.</p>
           </div>
 
           <div class="problem-card" onclick="selectProblem('business', this)">
             <div class="problem-icon-wrapper">💼</div>
             <h3 class="problem-title">أنا مش راضي عن شغلي</h3>
-            <p class="problem-desc">أشعر أنني محبوس داخل فخ الوظيفة التقليدية، أو قمت ببدء مشروع لكنني تحولت لعبد له بدلاً من إدارته.</p>
+            <p class="problem-desc">أشعر أنني أسير الوظيفة التقليدية، أو بدأت مشروعي الخاص لكن انتهى بي المطاف كعبد له بدلاً من إدارته.</p>
           </div>
 
           <div class="problem-card" onclick="selectProblem('psychology', this)">
             <div class="problem-icon-wrapper">👁️</div>
             <h3 class="problem-title">عايز أفهم البشر أكتر</h3>
-            <p class="problem-desc">أريد فهم خيوط السيطرة الخفية، لغة القوة والنفوذ، والتحكم في الجانب المظلم من نفسي وفهم دوافع الآخرين.</p>
+            <p class="problem-desc">أريد فهم خيوط السيطرة الخفية، لغة النفوذ والقوة، وفهم دوافع الآخرين وسلوك الجماهير الحقيقي.</p>
           </div>
         </div>
 
-        <!-- Curated dynamic playlist result -->
+        <!-- Curated results panel -->
         <div class="curated-panel" id="curated-panel">
           <div class="curated-title-area">
             <h3 class="curated-label" id="curated-panel-title">مسار تفكيك الأوهام المالية</h3>
             <span class="badge" id="curated-panel-badge">3 حلقات متتالية</span>
           </div>
           
-          <p class="curated-desc" id="curated-panel-desc">لقد اخترت مسار التحرر المالي. استمع إلى هذه الحلقات بالترتيب التالي لتفهم خريطة الهروب من المأزق المالي الذي وضعك فيه النظام التعليمي والمصرفي.</p>
+          <p class="curated-desc" id="curated-panel-desc">استمع إلى هذه الحلقات بالترتيب الموضح أدناه لتفهم مخطط الهروب من المأزق المالي وعقلية الاستهلاك التي يفرضها النظام المصرفي.</p>
           
-          <!-- Steps progression list -->
+          <!-- Progression timeline -->
           <div class="steps-timeline" id="steps-timeline">
-            <!-- Dynamic step elements via JS -->
+            <!-- Dynamic steps via JS -->
           </div>
         </div>
       </div>
@@ -1931,16 +2013,16 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h4>
-            <div class="logo-container" style="width: 32px; height: 32px; display: inline-flex; vertical-align: middle; margin-left: 10px;">
+            <div class="logo-container" style="width: 30px; height: 30px; display: inline-flex; vertical-align: middle; margin-left: 10px;">
               <img src="logo.png" alt="Book Breakdown AR" class="logo-img" id="footer-logo-img">
-              <div class="logo-fallback" style="font-size: 0.8rem;">BB</div>
+              <div class="logo-fallback" style="font-size: 0.75rem;">BB</div>
             </div>
             Book Breakdown AR
           </h4>
-          <p>أول بودكاست عربي متخصص في تشريح الكتب الأكثر إثارة للجدل، تفكيك البرمجة الفكرية والمالية، وتمكين الفرد من تحقيق سيادته الذاتية.</p>
+          <p>أول بودكاست عربي متخصص في تشريح الكتب الأكثر تأثيراً، تفكيك أوهام البرمجة الفكرية والمالية، وتمكين الفرد من تحقيق سيادته الشخصية.</p>
           <div class="footer-socials">
             <a href="https://www.youtube.com/@BookBreakdownAR" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
             </a>
           </div>
         </div>
@@ -1979,9 +2061,6 @@
        CLIENT-SIDE JAVASCRIPT
        ------------------------------------------------------------- -->
   <script>
-    /* -------------------------------------------------------------
-       DATA: EPISODES & BOOKS
-       ------------------------------------------------------------- */
     const EPISODES_DATA = [
       {
         id: "e1",
@@ -2045,7 +2124,7 @@
         author: "روبرت كيوساكي",
         category: "المال",
         episodeLinkId: "e5",
-        coverBg: "#1e222b",
+        coverBg: "#191c24",
         coverText: "الأب الغني والأب الفقير"
       },
       {
@@ -2053,7 +2132,7 @@
         author: "روبرت غرين",
         category: "علم النفس",
         episodeLinkId: "e3",
-        coverBg: "#2d1616",
+        coverBg: "#281313",
         coverText: "قوانين السطوة"
       },
       {
@@ -2061,7 +2140,7 @@
         author: "مورغان هوسل",
         category: "المال",
         episodeLinkId: "e6",
-        coverBg: "#172722",
+        coverBg: "#12201c",
         coverText: "سيكولوجية المال"
       },
       {
@@ -2069,7 +2148,7 @@
         author: "مارك مانسون",
         category: "الوعي الذاتي",
         episodeLinkId: "e4",
-        coverBg: "#2c2419",
+        coverBg: "#241d14",
         coverText: "فن اللامبالاة"
       },
       {
@@ -2077,7 +2156,7 @@
         author: "مايكل إي. غيربر",
         category: "ريادة الأعمال",
         episodeLinkId: "e2",
-        coverBg: "#1a242c",
+        coverBg: "#141d24",
         coverText: "خرافة ريادة الأعمال"
       },
       {
@@ -2085,7 +2164,7 @@
         author: "دانيال كانمان",
         category: "علم النفس",
         episodeLinkId: "e3",
-        coverBg: "#281e2b",
+        coverBg: "#201724",
         coverText: "التفكير السريع والبطيء"
       }
     ];
@@ -2181,21 +2260,17 @@
     function handleRouting() {
       const hash = window.location.hash || "#home";
       
-      // Hide all pages
       document.querySelectorAll(".page-view").forEach(page => {
         page.style.display = "none";
       });
 
-      // Show the targeted page
       const targetPage = document.querySelector(hash);
       if (targetPage) {
         targetPage.style.display = "block";
       } else {
-        // Fallback to home
         document.getElementById("home").style.display = "block";
       }
 
-      // Update Nav Link Active class
       document.querySelectorAll(".nav-link").forEach(link => {
         if (link.getAttribute("href") === hash) {
           link.classList.add("active");
@@ -2204,10 +2279,7 @@
         }
       });
 
-      // Scroll to top on page change
       window.scrollTo(0, 0);
-
-      // Re-trigger scroll animations reveal check
       setTimeout(triggerScrollCheck, 100);
     }
 
@@ -2230,10 +2302,9 @@
           observer.observe(el);
         });
       } else {
-        // CSS native view timelines will handle it, add css scroll-reveal class
         document.querySelectorAll('.reveal-on-scroll').forEach(el => {
           el.classList.add('scroll-reveal');
-          el.classList.add('active'); // fallback overrides opacity
+          el.classList.add('active'); 
         });
       }
     }
@@ -2255,20 +2326,16 @@
     /* -------------------------------------------------------------
        RENDERING LOGIC
        ------------------------------------------------------------- */
-    
-    // Home Page: 6 Latest Video cards
     function renderHomeLatestEpisodes() {
       const container = document.getElementById("home-latest-episodes");
       if (!container) return;
 
       container.innerHTML = "";
-      // Grab all 6 episodes for the landing grid
       EPISODES_DATA.forEach(ep => {
         container.innerHTML += createEpisodeCardHTML(ep);
       });
     }
 
-    // Episodes Page Archive grid rendering
     function renderEpisodesArchive(filteredList = EPISODES_DATA) {
       const container = document.getElementById("episodes-archive-grid");
       const noResults = document.getElementById("no-results-msg");
@@ -2289,7 +2356,6 @@
       }
     }
 
-    // Helper: Create single episode card html string
     function createEpisodeCardHTML(ep) {
       return `
         <div class="episode-card reveal-on-scroll">
@@ -2297,7 +2363,7 @@
             <img class="thumb-img" src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title}" loading="lazy">
             <div class="thumb-overlay">
               <div class="play-btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </div>
             </div>
             <span class="episode-duration">${ep.duration}</span>
@@ -2312,7 +2378,7 @@
             <div class="card-footer">
               <a href="https://www.youtube.com/watch?v=${ep.youtubeId}" target="_blank" rel="noopener" class="card-link">
                 شاهد الحلقة على يوتيوب
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
             </div>
           </div>
@@ -2320,18 +2386,17 @@
       `;
     }
 
-    // Books Library rendering
     function renderBooksLibrary() {
       const container = document.getElementById("books-grid");
       if (!container) return;
 
       container.innerHTML = "";
-      BOOKS_DATA.forEach(book => {
+      BOOKS_DATA.forEach((book, index) => {
         const episode = EPISODES_DATA.find(e => e.id === book.episodeLinkId);
         const youtubeUrl = episode ? `https://www.youtube.com/watch?v=${episode.youtubeId}` : "#episodes";
 
         container.innerHTML += `
-          <div class="book-card reveal-on-scroll">
+          <div class="book-card reveal-on-scroll" data-book-index="${index}">
             <div class="book-cover-3d">
               <div class="book-spine"></div>
               <div class="book-front" style="background-color: ${book.coverBg};">
@@ -2347,6 +2412,34 @@
           </div>
         `;
       });
+
+      // Attach 3D interactive tilt mouse listener
+      setTimeout(attachBookTiltEffect, 200);
+    }
+
+    function attachBookTiltEffect() {
+      document.querySelectorAll('.book-card').forEach(card => {
+        const cover = card.querySelector('.book-cover-3d');
+        if (!cover) return;
+
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          // Max rotation of 18 degrees
+          const rotateX = ((centerY - y) / centerY) * 18;
+          const rotateY = ((x - centerX) / centerX) * -18;
+          
+          cover.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.06)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          cover.style.transform = 'rotateX(0deg) rotateY(-10deg) scale(1)';
+        });
+      });
     }
 
     /* -------------------------------------------------------------
@@ -2355,7 +2448,6 @@
     function setCategoryFilter(category, elementBtn) {
       activeCategoryFilter = category;
       
-      // Update active button state
       const filterBtns = document.querySelectorAll(".filter-btn");
       filterBtns.forEach(btn => {
         if (btn.getAttribute("data-category") === category) {
@@ -2389,22 +2481,18 @@
        START HERE / DYNAMIC PATHWAY LOGIC
        ------------------------------------------------------------- */
     function selectProblem(problemKey, elementCard) {
-      // 1. Update selection state on cards
       document.querySelectorAll(".problem-card").forEach(card => {
         card.classList.remove("selected");
       });
       elementCard.classList.add("selected");
 
-      // 2. Fetch pathway data
       const pathway = PROBLEM_PATHWAYS[problemKey];
       if (!pathway) return;
 
-      // 3. Populate Curated Panel details
       document.getElementById("curated-panel-title").innerText = pathway.title;
       document.getElementById("curated-panel-badge").innerText = pathway.badge;
       document.getElementById("curated-panel-desc").innerText = pathway.desc;
 
-      // 4. Populate step timeline
       const timeline = document.getElementById("steps-timeline");
       timeline.innerHTML = "";
 
@@ -2414,29 +2502,27 @@
 
         timeline.innerHTML += `
           <div class="step-item">
-            <div class="step-num-node">0${index + 1}</div>
+            <div class="step-num-node">٠${index + 1}</div>
             <div class="step-content-card">
               <div class="step-thumb">
                 <img src="https://img.youtube.com/vi/${ep.youtubeId}/hqdefault.jpg" alt="${ep.title}" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <div class="step-info">
-                <span class="badge" style="margin-bottom: 5px; font-size: 0.7rem;">الخطوة ${index + 1}</span>
+                <span class="badge" style="margin-bottom: 5px; font-size: 0.65rem;">الخطوة ٠${index + 1}</span>
                 <h4 class="step-title">${ep.title}</h4>
                 <p class="step-summary">${ep.description}</p>
               </div>
               <a href="https://www.youtube.com/watch?v=${ep.youtubeId}" target="_blank" rel="noopener" class="step-action-btn" aria-label="شاهد الحلقة">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </a>
             </div>
           </div>
         `;
       });
 
-      // 5. Reveal Curated Panel
       const panel = document.getElementById("curated-panel");
       panel.style.display = "block";
       
-      // Scroll to view panel smoothly
       setTimeout(() => {
         panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }, 150);
@@ -2451,7 +2537,6 @@
       const form = document.getElementById("newsletter-form");
       const successMsg = document.getElementById("newsletter-success");
       
-      // Visual simulation only
       form.style.opacity = "0.5";
       form.querySelector("input").disabled = true;
       form.querySelector("button").disabled = true;
@@ -2472,7 +2557,7 @@
       let width = (canvas.width = window.innerWidth);
       let height = (canvas.height = window.innerHeight);
 
-      const mouse = { x: null, y: null, radius: 120 };
+      const mouse = { x: null, y: null, radius: 130 };
 
       window.addEventListener("mousemove", (e) => {
         mouse.x = e.clientX;
@@ -2494,31 +2579,28 @@
         constructor() {
           this.x = Math.random() * width;
           this.y = Math.random() * height;
-          this.size = Math.random() * 3 + 1.2; // size between 1.2px and 4.2px
-          this.speedX = Math.random() * 0.4 - 0.2; // slow drift
-          this.speedY = Math.random() * 0.4 - 0.2;
-          this.baseOpacity = Math.random() * 0.4 + 0.1;
+          this.size = Math.random() * 3.5 + 1.2; // size between 1.2px and 4.7px
+          this.speedX = Math.random() * 0.35 - 0.175; // slow drift
+          this.speedY = Math.random() * 0.35 - 0.175;
+          this.baseOpacity = Math.random() * 0.38 + 0.08;
           this.opacity = this.baseOpacity;
           this.pulseSpeed = Math.random() * 0.02 + 0.005;
           this.pulseAngle = Math.random() * Math.PI;
         }
 
         update() {
-          // Slow pulse opacity
           this.pulseAngle += this.pulseSpeed;
-          this.opacity = this.baseOpacity + Math.sin(this.pulseAngle) * 0.1;
+          this.opacity = this.baseOpacity + Math.sin(this.pulseAngle) * 0.08;
 
-          // Simple drift
           this.x += this.speedX;
           this.y += this.speedY;
 
-          // Re-wrap bounds
           if (this.x < 0) this.x = width;
           if (this.x > width) this.x = 0;
           if (this.y < 0) this.y = height;
           if (this.y > height) this.y = 0;
 
-          // Mouse push effect
+          // Mouse reactive push away
           if (mouse.x !== null && mouse.y !== null) {
             const dx = this.x - mouse.x;
             const dy = this.y - mouse.y;
@@ -2527,8 +2609,8 @@
             if (distance < mouse.radius) {
               const force = (mouse.radius - distance) / mouse.radius;
               const angle = Math.atan2(dy, dx);
-              this.x += Math.cos(angle) * force * 1.5;
-              this.y += Math.sin(angle) * force * 1.5;
+              this.x += Math.cos(angle) * force * 1.6;
+              this.y += Math.sin(angle) * force * 1.6;
             }
           }
         }
@@ -2543,7 +2625,7 @@
 
       function initParticles() {
         particles = [];
-        const count = Math.min(Math.floor((width * height) / 25000), 80); // density scale
+        const count = Math.min(Math.floor((width * height) / 20000), 90); 
         for (let i = 0; i < count; i++) {
           particles.push(new Particle());
         }
