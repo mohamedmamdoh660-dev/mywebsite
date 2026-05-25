@@ -14,3 +14,4 @@ All notable changes to this project will be documented in this file.
 - Added project documentation in `docs/documentation.md`.
 - Added `nixpacks.toml` configuration to copy static assets to a `dist/` directory during build, resolving Coolify's default static-site `dist/` folder requirement.
 - Created static Terms of Service (`terms.html`) and Privacy Policy (`privacy.html`) pages, linked them in the footer of the main website, and updated build command in `nixpacks.toml` to copy all HTML files.
+- Integrated an interactive HTML5 canvas glowing particle background in Javascript and CSS, inspired by the Stanford Fairer Tomorrow website design, adding motion depth and floating light particles reacting to mouse movements.
